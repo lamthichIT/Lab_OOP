@@ -13,6 +13,19 @@ public class Cart {
             System.out.println("The disc has been added successfully.");
         }
     }
+    //Overloading
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+        for (DigitalVideoDisc disc : dvdList) {
+            if (qtyOrdered >= MAX_NUM_ORDERED) {
+                System.out.println("The cart is almost full!");
+                break;
+            } else {
+                itemsOrdered[qtyOrdered] = disc;
+                qtyOrdered++;
+                System.out.println("The disc has been added successfully.");
+            }
+        }
+    }
 
     // Xóa DVD khỏi giỏ hàng
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
