@@ -61,6 +61,8 @@ public class MainController {
 
     @FXML
     public void initialize() {
+        // Tự động co nhỏ lại khi thoát Fullscreen
+        mediaContainer.setMinSize(0, 0);
         // Tự động co giãn khung hình Video theo kích thước cửa sổ
         videoImageView.fitWidthProperty().bind(mediaContainer.widthProperty());
         videoImageView.fitHeightProperty().bind(mediaContainer.heightProperty());
